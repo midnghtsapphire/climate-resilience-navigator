@@ -32,8 +32,10 @@ Climate Resilience Navigator is a full-stack climate risk intelligence product f
 - `CHANGELOG.md`
 - `DEPLOYMENT_GUIDE.md`
 - `GO_TO_MARKET.md`
+- `RESEARCH_ENGINES.md`
 - `BRAND_GUIDELINES.md`
 - `SECURITY.md`
+- `ASSETS_AND_ARTIFACTS.md`
 - `scripts/test-baseline.js`
 - `scripts/build-baseline.js`
 
