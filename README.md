@@ -1,88 +1,69 @@
 # Climate Resilience Navigator
 
-Climate data and resilience planning
+Climate Resilience Navigator is a full-stack climate risk intelligence product for cities, infrastructure teams, and operators. It combines a Vite + React decision UI with a FastAPI backend for auth, billing, and data APIs.
 
-## Features
+## What this repository does
 
-- ✅ FastAPI backend with full REST API
-- ✅ PostgreSQL database with SQLAlchemy ORM
-- ✅ JWT authentication + Google OAuth
-- ✅ Dual-mode Stripe billing (test/live)
-- ✅ Redis caching
-- ✅ Docker + docker-compose setup
-- ✅ OpenAI integration for AI features
+- Maps and visualizes climate risk signals for planning and response
+- Supports authenticated user workflows and protected API access
+- Includes Stripe-ready billing routes for subscription models
+- Provides Dockerized local and production-style deployment paths
 
-## Quick Start
+## How it can be used now
+
+1. Start the backend via Docker (`docker-compose up -d`) or locally with Uvicorn
+2. Run the frontend with `npm run dev`
+3. Use the dashboard UI to inspect resilience indicators and climate planning data
+
+## Website in Test (Vercel)
+
+- **Test URL:** https://climate-resilience-navigator.vercel.app
+- **Deployment automation reference:** see `DEPLOYMENT_GUIDE.md` (Vercel + CI flow)
+
+## S2M value and goal alignment
+
+- **Core value:** helps organizations reduce climate exposure by prioritizing high-impact adaptation interventions.
+- **Goal priority:** converts risk data into actionable resilience programs and monetizable subscription workflows.
+- **3-year commercial framing:** target a path to **$10M ARR in 3 years** via B2B subscriptions, implementation services, and enterprise analytics add-ons.
+
+## Revvel standards docs in this repo
+
+- `README.md`
+- `CHANGELOG.md`
+- `DEPLOYMENT_GUIDE.md`
+- `GO_TO_MARKET.md`
+- `BRAND_GUIDELINES.md`
+- `SECURITY.md`
+- `scripts/test-baseline.js`
+- `scripts/build-baseline.js`
+
+## Quick start
 
 ### Prerequisites
+
+- Node.js 20+
 - Docker and Docker Compose
-- Python 3.11+ (for local development)
+- Python 3.11+ (if running backend outside Docker)
 
-### Setup
+### Frontend
 
-1. Clone the repository
-2. Copy `.env.example` to `.env` and fill in your credentials
-3. Start with Docker Compose:
+```bash
+npm ci
+npm run dev
+```
+
+### Backend (Docker)
 
 ```bash
 docker-compose up -d
 ```
 
-4. Access the API at `http://localhost:8005`
-5. API docs at `http://localhost:8005/docs`
+Backend docs: `http://localhost:8005/docs`
 
-### Local Development
+## Validation commands
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run database migrations
-# (TODO: Add Alembic migrations)
-
-# Start development server
-uvicorn server.main:app --reload --port 8005
+npm run test
+npm run build
+npm run lint
 ```
-
-## API Endpoints
-
-- `GET /health` - Health check
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - Login
-- `GET /api/auth/me` - Get current user
-- (More endpoints in `/docs`)
-
-## Environment Variables
-
-See `.env.example` for all required environment variables.
-
-### Stripe Dual Mode
-
-The app supports both Stripe test and live modes. Set `STRIPE_MODE=test` or `STRIPE_MODE=live` in your `.env` file.
-
-## Tech Stack
-
-- **Backend:** FastAPI, Python 3.11
-- **Database:** PostgreSQL 15
-- **Cache:** Redis 7
-- **Auth:** JWT + Google OAuth
-- **Payments:** Stripe
-- **AI:** OpenAI API
-- **Deployment:** Docker, docker-compose
-
-## License
-
-Proprietary - All rights reserved
-
-## Support
-
-For support, email support@example.com
-
----
-
-## Test
-
-| Feature | Status |
-|---------|--------|
-| Feature | ✅ Ready |
-
