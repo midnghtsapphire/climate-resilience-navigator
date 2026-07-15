@@ -1,5 +1,9 @@
 # Climate Resilience Navigator
 
+
+<!-- AUTO-PACKAGE-BADGES:START -->
+
+<!-- AUTO-PACKAGE-BADGES:END -->
 Climate Resilience Navigator is a full-stack climate risk intelligence product for cities, infrastructure teams, and operators. It combines a Vite + React decision UI with a FastAPI backend for auth, billing, and data APIs.
 
 ## What this repository does
